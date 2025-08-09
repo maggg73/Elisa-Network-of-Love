@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chi era Elisa — Elisa’s Network of Love</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles2.css"/>
+</head>
+<body>
+  <!-- Header con menú hamburguesa (reutiliza tu JS y CSS actuales) -->
+  <header>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <div class="logo">Elisa's Network of Love</div>
+    <nav id="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="ChiEraElisa.html">Chi era Elisa</a></li>
+        <li><a href="index-full.html#misiones">Missione</a></li>
+        <li><a href="attivita.html">Attività</a></li>
+        <li><a href="donazioni.html">Donazioni</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Overlay local (si lo estás usando en el resto del sitio) -->
+  <div id="menu-overlay" class="menu-overlay"></div>
+
+  <main class="page">
+    <!-- Hero con foto principal + texto breve -->
+    <section class="info-section fade-in">
+      <div class="media-frame hero-photo">
+        <img src="media/Elisa.jpg" alt="Ritratto di Elisa" />
+      </div>
+      <h1 class="page-title">Chi era Elisa</h1>
+      <p class="lead">
+        Elisa era una giovane psicologa e attrice che amava il mare, il teatro e la vita condivisa con gli altri. 
+        La sua presenza gentile e la sua forza luminosa continuano a ispirare progetti di cura, cultura e speranza.
+      </p>
+    </section>
+
+    <!-- Video orizzontale -->
+    <section class="info-section fade-in">
+      <div class="media-frame wide">
+        <video controls playsinline class="video-horizontal" poster="media/elisa-video-poster.jpg">
+          <source src="media/Per Elisa.mp4" type="video/mp4"/>
+          Il tuo browser non supporta il video HTML5.
+        </video>
+      </div>
+    </section>
+
+    <!-- Sezione 1: Un albero per Elisa (foto + testo) -->
+    <section class="split-section fade-in">
+      <div class="split-media">
+        <img src="media/IL MELOGRANO DI ELISA.jpg" alt="Albero di melograno per Elisa" />
+      </div>
+      <div class="split-text">
+        <h2>Un albero per Elisa</h2>
+        <p>
+          Il 20 settembre 2023, nel giardino della Ditta INPECO di Val della Torre, nel corso di una commovente
+          cerimonia i colleghi di Elisa hanno piantato per lei un albero di melograno, antico simbolo di prosperità,
+          passione, energia, vitalità. È bello pensare che in quel parco bellissimo, ai piedi delle montagne, cresca
+          una pianta nata dall’amore. E che, sotto nuova forma, Elisa sia ancora in un luogo che le piaceva tanto,
+          accanto ai compagni con cui ha trascorso ore felici.
+        </p>
+        <p><em>Grazie, amici dell’INPECO!</em></p>
+      </div>
+    </section>
+
+    <!-- Sezione 2: La panchina delle balene (foto + testo) -->
+    <section class="split-section reverse fade-in">
+      <div class="split-media">
+        <img src="media/FOTO.jpg" alt="Panchina dipinta dedicata a Elisa" />
+      </div>
+      <div class="split-text">
+        <h2>La panchina delle balene</h2>
+        <p>
+          Elisa aveva una passione per i cetacei. Da bambina, amava partecipare al Whale Watching nel Santuario dei
+          Cetacei Pelagos, il tratto di mare fra Liguria, Costa Azzurra, Toscana e Sardegna, che costituisce una delle
+          aree più ricche di vita del Mediterraneo.
+        </p>
+        <p>
+          Nel ricordo di queste gite meravigliose, abbiamo chiesto all’artista Vito Navolio di dipingere una balena e
+          scrivere <strong>IL MARE SA.</strong> sulla panchina che nei Giardini Vito Scafidi di Piazza Chiaves, a Torino,
+          è stata dedicata a E.V.E. (Elisa Van Eynde) nell’ambito delle opere del MAU, Museo di Arte Urbana.
+        </p>
+        <p>
+          Perché, oltre ai ricordi, emerga la speranza.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Elisa’s Network of Love. Tutti i diritti riservati.</p>
+    <p>Email: elisa.networkoflove@gmail.com — Pec: elisa.networkoflove@pec.it</p>
+    <p>Instagram: elisa.network.of.love — Facebook: Elisa’s Network of Love</p>
+    <p>Sede legale: Strada Val San Martino 81/10 F-10131 Torino</p>
+  </footer>
+
+  <!-- JS del menú (reutilizado) -->
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('main-nav');
+      const overlay = document.getElementById('menu-overlay');
+      nav.classList.toggle('active');
+      if (overlay) overlay.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

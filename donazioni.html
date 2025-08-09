@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contatti e Donazioni</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles2.css">
+  <link rel="stylesheet" href="donazioni.css">
+  <style>
+    .donation-section {
+      text-align: center;
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.5);
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    .donation-section button {
+      margin: 20px 0;
+      padding: 12px 30px;
+      background-color: #adb7ff;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .donation-section button:hover {
+      background-color: #7d89d0;
+    }
+
+    footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+      background: rgba(255, 255, 255, 0.3);
+      font-size: 0.95rem;
+      color: #3a4a60;
+      line-height: 1.8;
+    }
+
+    footer p {
+      margin: 8px 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<script>
+    function toggleMenu() {
+      const nav = document.getElementById('main-nav');
+      nav.classList.toggle('active');
+    }
+  </script>
+  
+<body>
+    <header>
+        <div class="logo">Elisa's Network of Love</div>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <nav id="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+             <li><a href="ChiEraElisa.html">Chi era Elisa</a></li>
+            <li><a href="index-full.html#misiones">Missione</a></li>
+            <li><a href="attivita.html">Attività</a></li>
+            <li><a href="donazioni.html">Donazioni</a></li>
+
+
+          </ul>
+        </nav>
+      </header>
+      
+
+  <main class="donation-page">
+    <h1 style="text-align: center; margin-top: 40px;">Contatti e Donazioni</h1>
+
+    <section class="donation-section">
+      <h2>Fai una Donazione</h2>
+      <p>Il tuo supporto ci aiuta a portare avanti le nostre attività e sostenere chi ne ha bisogno.</p>
+      <button onclick="window.location.href='https://www.paypal.com'">Dona con PayPal</button>
+      <p>Oppure effettua un bonifico bancario:</p>
+      <p><strong>IBAN:</strong> IT00X0000000000000000000000</p>
+      <p><strong>Intestatario:</strong> Elisa’s Network of Love</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Elisa’s Network of Love. Tutti i diritti riservati.</p>
+    <p>Email: elisa.networkoflove@gmail.com</p>
+    <p>Pec: elisa.networkoflove@pec.it</p>
+    <p>Instagram: elisa.network.of.love</p>
+    <p>Facebook: Elisa´s Network of Love</p>
+    <p>Sede legale: Strada Val San Martino 81/10 F-10131 Torino</p>
+  </footer>
+</body>
+</html>

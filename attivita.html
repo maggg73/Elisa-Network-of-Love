@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Le Nostre Attività</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles2.css" />
+  <style>
+    .activity-section {
+      padding: 60px 40px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .activity {
+      background: rgba(255, 255, 255, 0.6);
+      padding: 30px;
+      border-radius: 20px;
+      margin-bottom: 40px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    .activity h2 {
+      font-size: 1.6rem;
+      color: #3a4a60;
+      margin-bottom: 20px;
+    }
+
+    .carousel {
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+    }
+
+    .carousel img {
+      width: 100%;
+      height: auto;
+      display: none;
+      border-radius: 15px;
+    }
+
+    .carousel img.active {
+      display: block;
+    }
+
+    .carousel button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.3);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+
+    .carousel .prev { left: 10px; }
+    .carousel .next { right: 10px; }
+  </style>
+</head>
+<script>
+    function toggleMenu() {
+      const nav = document.getElementById('main-nav');
+      nav.classList.toggle('active');
+    }
+  </script>
+  
+<body>
+    <header>
+        <div class="logo">Elisa's Network of Love</div>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <nav id="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+             <li><a href="ChiEraElisa.html">Chi era Elisa</a></li>
+            <li><a href="index-full.html#misiones">Missione</a></li>
+            <li><a href="attivita.html">Attività</a></li>
+            <li><a href="donazioni.html">Donazioni</a></li>
+
+
+          </ul>
+        </nav>
+      </header>
+      
+
+  <section class="activity-section">
+    <h1 style="text-align:center; color:#3a4a60; margin-bottom: 50px;">Le Nostre Attività</h1>
+
+    <div class="activity">
+      <h2>Concorso annuale di stand-up</h2>
+      <div class="carousel">
+        <img src="media/1.jpg" class="active" alt="Stand-up" />
+        <img src="media/2.jpg" alt="Stand-up 2" />
+        <button class="prev" onclick="prevSlide(this)">&#10094;</button>
+        <button class="next" onclick="nextSlide(this)">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="activity">
+      <h2>Serate dedicate a temi tabù</h2>
+      <div class="carousel">
+        <img src="media/pexels3.jpg" class="active" alt="Temi tabù" />
+        <img src="media/pexels4.jpg" alt="Temi tabù 2" />
+        <button class="prev" onclick="prevSlide(this)">&#10094;</button>
+        <button class="next" onclick="nextSlide(this)">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="activity">
+      <h2>Attività con i ragazzi del liceo "Gioberti"</h2>
+      <div class="carousel">
+        <img src="media/pexels5.jpg" class="active" alt="Liceo Gioberti" />
+        <img src="media/pexels6.jpg" alt="Liceo Gioberti 2" />
+        <button class="prev" onclick="prevSlide(this)">&#10094;</button>
+        <button class="next" onclick="nextSlide(this)">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="activity">
+      <h2>Eventi con Gruppi Scout presso l’hospice di Chieri</h2>
+      <div class="carousel">
+        <img src="media/pexels7.jpg" class="active" alt="Scout Chieri" />
+        <img src="media/pexels8.jpg" alt="Scout Chieri 2" />
+        <button class="prev" onclick="prevSlide(this)">&#10094;</button>
+        <button class="next" onclick="nextSlide(this)">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="activity">
+      <h2>Ospitalità per malati e famiglie a Torino per cure mediche</h2>
+      <div class="carousel">
+        <img src="media/pexels9.jpg" class="active" alt="Ospitalità" />
+        <img src="media/pexels10.jpg" alt="Ospitalità 2" />
+        <button class="prev" onclick="prevSlide(this)">&#10094;</button>
+        <button class="next" onclick="nextSlide(this)">&#10095;</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Elisa’s Network of Love. Tutti i diritti riservati.</p>
+    <p>Email: elisa.networkoflove@gmail.com</p>
+    <p>Pec: elisa.networkoflove@pec.it</p>
+    <p>Instagram: elisa.network.of.love</p>
+    <p>Facebook: Elisa´s Network of Love</p>
+    <p>Sede legale: Strada Val San Martino 81/10 F-10131 Torino</p>
+  </footer>
+
+  <script>
+    function nextSlide(button) {
+      const carousel = button.closest('.carousel');
+      const images = carousel.querySelectorAll('img');
+      let currentIndex = Array.from(images).findIndex(img => img.classList.contains('active'));
+      images[currentIndex].classList.remove('active');
+      let nextIndex = (currentIndex + 1) % images.length;
+      images[nextIndex].classList.add('active');
+    }
+
+    function prevSlide(button) {
+      const carousel = button.closest('.carousel');
+      const images = carousel.querySelectorAll('img');
+      let currentIndex = Array.from(images).findIndex(img => img.classList.contains('active'));
+      images[currentIndex].classList.remove('active');
+      let prevIndex = (currentIndex - 1 + images.length) % images.length;
+      images[prevIndex].classList.add('active');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elisa’s Network of Love</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles2.css" />
+  <style>
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1.5s ease-out forwards;
+      animation-delay: 0.3s;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById('main-nav');
+    const overlay = document.getElementById('menu-overlay');
+    nav.classList.toggle('active');
+    overlay.classList.toggle('active');
+
+    // Evita que se haga scroll cuando el menú está abierto
+    if (nav.classList.contains('active')) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  }
+</script>
+
+
+<body>
+  <header>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <div class="logo">Elisa's Network of Love</div>
+  <nav id="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+         <li><a href="ChiEraElisa.html">Chi era Elisa</a></li>
+        <li><a href="index-full.html#misiones">Missione</a></li>
+        <li><a href="attivita.html">Attività</a></li>
+        <li><a href="donazioni.html">Donazioni</a></li>
+
+
+      </ul>
+    </nav>
+  </header>
+  <div id="menu-overlay" class="menu-overlay"></div>
+
+
+  <section id="inicio" class="hero">
+    <video autoplay loop muted playsinline>
+      <source src="media/mar.mp4" type="video/mp4" />
+      Il tuo browser non supporta il tag video.
+    </video>
+    <div class="video-overlay"></div>
+    <div class="hero-text fade-in">
+      <h1>Elisa’s Network of Love</h1>
+      <p>È una Associazione di volontariato (ODV) senza scopo di lucro fondata dai familiari e dagli amici di Elisa Van Eynde, una giovane psicologa e attrice scomparsa a 29 anni, nel dicembre 2022.</p>
+      <a href="attivita.html" class="button">Scopri di più</a>
+    </div>
+  </section>
+
+  <section id="quienes-somos" class="info-section fade-in">
+    <h2>Chi siamo</h2>
+    <p>Elisa’s Network of Love è un’associazione dedicata a portare avanti i sogni e i progetti di Elisa, diffondendo il suo amore per la vita, il teatro e il benessere mentale.</p>
+  </section>
+
+  <section id="misiones" class="info-section fade-in">
+    <h2>La nostra missione</h2>
+    <div class="missions">
+      <div class="mission-card">
+        <h3>Gioia e speranza</h3>
+        <p>Portare gioia e speranza nel mondo, continuando i progetti e i sogni di Elisa.</p>
+      </div>
+      <div class="mission-card">
+        <h3>Benessere psicologico</h3>
+        <p>Promuovere il benessere delle persone con il suo lavoro di psicologia.</p>
+      </div>
+      <div class="mission-card">
+        <h3>Cultura e teatro</h3>
+        <p>Regalare emozioni e risate, far riflettere con le sue attività teatrali e culturali.</p>
+      </div>
+      <div class="mission-card">
+        <h3>Volontariato</h3>
+        <p>Aiutare con il volontariato chi vive l’esperienza della malattia.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Elisa’s Network of Love. Tutti i diritti riservati.</p>
+    <p>Email: elisa.networkoflove@gmail.com</p>
+    <p>Pec: elisa.networkoflove@pec.it</p>
+    <p>Instagram: elisa.network.of.love</p>
+    <p>Facebook: Elisa´s Network of Love</p>
+    <p>Sede legale: Strada Val San Martino 81/10 F-10131 Torino</p>
+  </footer>
+</body>
+</html>
